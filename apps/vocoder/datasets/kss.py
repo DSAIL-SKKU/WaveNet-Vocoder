@@ -14,6 +14,7 @@ def build_from_path(in_dir, out_dir, silence_threshold, fft_size, num_workers=1,
     index = 1
     with open(os.path.join(in_dir, 'metadata.csv'), encoding='utf-8') as f:
         for line in f:
+            print(line)
             parts = line.strip().split('|')
             wav_path = os.path.join(in_dir, 'wavs', '%s.wav' % parts[0])
             # In case of test file
