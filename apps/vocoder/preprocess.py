@@ -45,6 +45,6 @@ if __name__ == "__main__":
 
     print("Sampling frequency: {}".format(hparams.sample_rate))
 
-    assert name in ["cmu_arctic", "ljspeech"]
+    assert name in ["cmu_arctic", "ljspeech", "kss"]
     mod = importlib.import_module('apps.vocoder.datasets.{}'.format(name))
     preprocess(mod, in_dir, out_dir, num_workers)
